@@ -28,14 +28,16 @@ docker image history my - alpine
 
 
 // this will build a docker image from a dockerfile for us
-docker image build . -t dashboard
-docker image build - t my - centos - f Dockerfile.
+docker image build . -t personal
+//docker image build - t my - centos - f Dockerfile.
 
-docker run --name dashboard -d -p 8080:80 dashboard
+// this will run a docker container from the custom image we generated
+docker run --name personal-website -d -p 8080:80 personal
 
 
 //setting up tags that will be pushed to docker hub
-docker tag dashboard:latest tsola2002 / nginx - dashboard: latest
+docker tag dashboard:latest tsola200 / nginx - dashboard: latest
+docker tag personal:latest tsola2002/second-image:latest
 
 // this will push our image to docker hub
-docker push tsola2002/nginx-dashboard:latest
+docker push tsola2002/second-image:latest
