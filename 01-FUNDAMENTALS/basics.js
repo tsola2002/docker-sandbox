@@ -31,4 +31,7 @@ docker exec -it suspicious_bash sh
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\T{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 
 //runs the ps command using the above format
-docker ps --format=$FORMAT
+docker ps--format = $FORMAT
+
+//THIS WILL REMOVE ALL RUNNING CONTAINERS 
+docker container rm -v -f $(docker container ls -aq)
