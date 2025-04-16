@@ -32,7 +32,7 @@ docker image build . -t personal
 //docker image build - t my - centos - f Dockerfile.
 
 // this will run a docker container from the custom image we generated
-docker run--name personal - website - d - p 8080: 80 personal
+docker run --name personal-website -d -p 8080:80 personal
 docker run --name fahd-assignment -d -p 8080:80 fahd0dev/dashboard-image
 
 
